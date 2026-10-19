@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sitio web educativo sobre calistenia: ejercicios con el peso corporal, beneficios, tabla de ejercicios, galería y video. Recursos accesibles y responsivos.">
+    <meta name="author" content="Sitio educativo de Calistenia">
+    <title>Calistenia · Sitio Educativo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💪</text></svg>">
+</head>
+<body>
+    <a class="skip-link" href="#main">Saltar al contenido principal</a>
+
+    <!-- ========================= CABECERA ========================= -->
+    <header class="site-header" role="banner">
+        <div class="header-inner">
+            <div class="brand">
+                <span class="brand-icon" aria-hidden="true">💪</span>
+                <div class="brand-text">
+                    <h1 class="site-title">Calistenia</h1>
+                    <p class="site-subtitle">Sitio educativo</p>
+                </div>
+            </div>
+
+            <!-- Menú de accesibilidad -->
+            <div class="a11y-tools" role="group" aria-label="Opciones de accesibilidad">
+                <button type="button" class="a11y-btn" id="btnTheme" aria-pressed="false" title="Cambiar tema claro/oscuro">
+                    <span class="a11y-icon" aria-hidden="true">🌓</span>
+                    <span class="a11y-label">Tema</span>
+                </button>
+                <button type="button" class="a11y-btn" id="btnFontInc" title="Aumentar tamaño del texto">
+                    <span class="a11y-icon" aria-hidden="true">➕A</span>
+                    <span class="a11y-label">Texto +</span>
+                </button>
+                <button type="button" class="a11y-btn" id="btnFontDec" title="Disminuir tamaño del texto">
+                    <span class="a11y-icon" aria-hidden="true">➖A</span>
+                    <span class="a11y-label">Texto −</span>
+                </button>
+                <button type="button" class="a11y-btn" id="btnFontReset" title="Restablecer tamaño del texto">
+                    <span class="a11y-icon" aria-hidden="true">↺</span>
+                    <span class="a11y-label">Restablecer</span>
+                </button>
+                <button type="button" class="a11y-btn" id="btnContrast" aria-pressed="false" title="Alto contraste">
+                    <span class="a11y-icon" aria-hidden="true">🔲</span>
+                    <span class="a11y-label">Contraste</span>
+                </button>
+            </div>
+
+            <!-- Botón menú móvil -->
+            <button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Abrir o cerrar menú de navegación">
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+            </button>
+
+            <!-- Navegación -->
+            <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
+                <ul class="nav-list">
+                    <li><a href="#inicio" class="nav-link" aria-current="page">Inicio</a></li>
+                    <li><a href="#contenido" class="nav-link">Contenido</a></li>
+                    <li><a href="#tabla" class="nav-link">Tabla</a></li>
+                    <li><a href="#galeria" class="nav-link">Galería</a></li>
+                    <li><a href="#video" class="nav-link">Video</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+
+        <!-- ========================= INICIO ========================= -->
+        <section id="inicio" class="section section-hero" aria-labelledby="hero-title">
+            <div class="hero-content">
+                <h2 id="hero-title" class="hero-title">Calistenia: entrena con tu propio peso</h2>
+                <p class="hero-intro">
+                    La <strong>calistenia</strong> es una forma de entrenamiento de fuerza que utiliza el peso corporal
+                    como resistencia, con movimientos multiarticulares y poco o ningún equipo. Se puede practicar
+                    en casi cualquier lugar y mejora fuerza, resistencia, movilidad, coordinación y equilibrio.
+                </p>
+                <a href="#contenido" class="btn btn-primary" id="btnExplorar">Explorar</a>
+            </div>
+            <figure class="hero-figure">
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/9/93/Calisthenics_in_Osdorp.jpg"
+                    alt="Parque de calistenia en Osdorp, Ámsterdam, con barras de entrenamiento al aire libre."
+                    loading="lazy"
+                    width="640" height="480">
+                <figcaption>
+                    Parque de calistenia en Osdorp, Ámsterdam (Países Bajos).
+                    Foto: <a href="https://commons.wikimedia.org/wiki/User:KlaasZ4usV" target="_blank" rel="noopener noreferrer">Klaas `Z4us` van B. V</a> —
+                    <a href="https://commons.wikimedia.org/wiki/File:Calisthenics_in_Osdorp.jpg" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a> vía Wikimedia Commons.
+                </figcaption>
+            </figure>
+        </section>
+
+        <!-- ========================= CONTENIDO ========================= -->
+        <section id="contenido" class="section" aria-labelledby="contenido-title">
+            <h2 id="contenido-title">Contenido</h2>
+
+            <article class="content-block">
+                <h3>¿Qué es la calistenia?</h3>
+                <p>
+                    La calistenia (del griego <em>kállos</em>, "belleza", y <em>sthenos</em>, "fuerza") consiste en
+                    ejercicios físicos que emplean el <strong>peso del propio cuerpo</strong> como resistencia.
+                    Se realiza con <strong>poco o ningún equipo</strong>, lo que la hace muy accesible: puede
+                    practicarse en casa, en un parque o durante un viaje.
+                </p>
+                <p>
+                    Entre los ejercicios más conocidos están las <strong>flexiones</strong> (push-ups), las
+                    <strong>dominadas</strong> (pull-ups), las <strong>squats</strong> (sentadillas), los
+                    <strong>fundamentos de plancha</strong> (plank) y los <em>burpees</em>. A medida que se avanza,
+                    aparecen habilidades más complejas como el <em>muscle-up</em>, el <em>plancha</em>, el
+                    <em>front lever</em> y el <em>handstand</em>.
+                </p>
+            </article>
+
+            <article class="content-block">
+                <h3>Beneficios principales</h3>
+                <p>La calistenia aporta ventajas como:</p>
+                <ul class="benefits-list">
+                    <li>Mejora la <strong>fuerza y la resistencia</strong> muscular con equipo mínimo.</li>
+                    <li>Aumenta la <strong>movilidad</strong> y el control corporal.</li>
+                    <li>Favorece la <strong>postura</strong> y la composición corporal.</li>
+                    <li>Es <strong>gratuita</strong> y se puede practicar en casi cualquier lugar.</li>
+                    <li>Se adapta a distintos niveles mediante <strong>progresiones</strong>.</li>
+                </ul>
+                <blockquote class="quote">
+                    <p>
+                        "La calistenia es una solución de entrenamiento eficaz para mejorar la postura, la fuerza
+                        y la composición corporal sin necesidad de equipos complejos."
+                    </p>
+                    <footer>
+                        — Thomas <em>et al.</em> (2017), estudio citado en
+                        <a href="https://en.wikipedia.org/wiki/Calisthenics" target="_blank" rel="noopener noreferrer">Wikipedia: Calisthenics</a> (en inglés).
+                    </footer>
+                </blockquote>
+            </article>
+
+            <article class="content-block">
+                <h3>Ejercicios habituales</h3>
+                <p>
+                    Estos son algunos de los movimientos básicos que conviene dominar antes de avanzar a
+                    habilidades de mayor dificultad:
+                </p>
+                <ol class="exercise-list">
+                    <li><strong>Flexiones (push-ups):</strong> trabajo de pecho, hombros y tríceps.</li>
+                    <li><strong>Dominadas (pull-ups):</strong> trabajo de dorsales, espalda alta y antebrazos.</li>
+                    <li><strong>Sentadillas (squats):</strong> trabajo de cuádriceps, isquiotibiales y glúteos.</li>
+                    <li><strong>Plancha (plank):</strong> trabajo isométrico del core.</li>
+                    <li><strong>Burpees:</strong> ejercicio de cuerpo completo de alta intensidad.</li>
+                </ol>
+                <p>
+                    Consulta más detalles y contextos históricos en la
+                    <a href="https://es.wikipedia.org/wiki/Calistenia" target="_blank" rel="noopener noreferrer">enciclopedia libre (Wikipedia en español)</a>
+                    o en el artículo de
+                    <a href="https://en.wikipedia.org/wiki/Calisthenics" target="_blank" rel="noopener noreferrer">Wikipedia en inglés</a>.
+                </p>
+            </article>
+        </section>
+
+        <!-- ========================= TABLA ========================= -->
+        <section id="tabla" class="section" aria-labelledby="tabla-title">
+            <h2 id="tabla-title">Tabla de ejercicios</h2>
+            <p class="table-note">
+                <strong>Nota:</strong> los datos siguientes son <em>ejemplos ficticios</em> con fines educativos.
+                Las repeticiones, series y niveles son orientativos y no sustituyen el asesoramiento de un profesional.
+            </p>
+            <div class="table-wrapper" tabindex="0" role="region" aria-label="Tabla de ejercicios (desplazamiento horizontal si es necesario)">
+                <table class="data-table">
+                    <caption>Ejercicios de calistenia — datos de ejemplo</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Ejercicio</th>
+                            <th scope="col">Grupo muscular principal</th>
+                            <th scope="col">Nivel</th>
+                            <th scope="col">Series</th>
+                            <th scope="col">Repeticiones</th>
+                            <th scope="col">Equipamiento</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Flexiones</th>
+                            <td>Pecho, hombros, tríceps</td>
+                            <td>Principiante</td>
+                            <td>3</td>
+                            <td>10–15</td>
+                            <td>Ninguno</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Dominadas</th>
+                            <td>Dorsales, espalda alta</td>
+                            <td>Intermedio</td>
+                            <td>4</td>
+                            <td>6–10</td>
+                            <td>Barra</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Sentadillas</th>
+                            <td>Cuádriceps, glúteos</td>
+                            <td>Principiante</td>
+                            <td>3</td>
+                            <td>15–20</td>
+                            <td>Ninguno</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Plancha</th>
+                            <td>Core (abdomen)</td>
+                            <td>Principiante</td>
+                            <td>3</td>
+                            <td>30–60 s</td>
+                            <td>Ninguno</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Muscle-up</th>
+                            <td>Espalda, pecho, hombros</td>
+                            <td>Avanzado</td>
+                            <td>4</td>
+                            <td>3–6</td>
+                            <td>Barra o anillas</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- ========================= GALERÍA ========================= -->
+        <section id="galeria" class="section" aria-labelledby="galeria-title">
+            <h2 id="galeria-title">Galería</h2>
+            <div class="gallery-grid">
+
+                <figure class="gallery-item">
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Street-workout-exercises.jpg"
+                        alt="Persona realizando ejercicios de street workout en una estructura metálica al aire libre."
+                        loading="lazy"
+                        width="640" height="640">
+                    <figcaption>
+                        <strong>Ejercicios de street workout</strong>
+                        <span class="desc">Una persona realizando ejercicios de street workout en una estructura metálica al aire libre.</span>
+                        <span class="credit">
+                            Foto: <a href="https://commons.wikimedia.org/w/index.php?title=User:Someone272" target="_blank" rel="noopener noreferrer">Someone272</a> —
+                            <a href="https://commons.wikimedia.org/wiki/File:Street-workout-exercises.jpg" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a> vía Wikimedia Commons.
+                        </span>
+                    </figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/a/a9/02025_0832_Street_workout_in_Bielsko-Bia%C5%82a.jpg"
+                        alt="Atleta de street workout practicando en un parque de calistenia en Bielsko-Biała, Polonia."
+                        loading="lazy"
+                        width="640" height="640">
+                    <figcaption>
+                        <strong>Street workout en Bielsko-Biała</strong>
+                        <span class="desc">Atleta practicando en un parque de calistenia en Bielsko-Biała (Polonia).</span>
+                        <span class="credit">
+                            Foto: <a href="https://commons.wikimedia.org/w/index.php?title=User:Marsilar" target="_blank" rel="noopener noreferrer">Marsilar</a> —
+                            <a href="https://commons.wikimedia.org/wiki/File:02025_0832_Street_workout_in_Bielsko-Bia%C5%82a.jpg" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a> vía Wikimedia Commons.
+                        </span>
+                    </figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/d/dc/Calisthenics_Park_Stuttgart-Bad_Cannstatt.jpg"
+                        alt="Parque de calistenia en Stuttgart-Bad Cannstatt (Alemania) con barras y estructuras para entrenar."
+                        loading="lazy"
+                        width="640" height="640">
+                    <figcaption>
+                        <strong>Parque de calistenia en Stuttgart</strong>
+                        <span class="desc">Parque de calistenia en Stuttgart-Bad Cannstatt (Alemania) con barras y estructuras para entrenar.</span>
+                        <span class="credit">
+                            Foto: <a href="https://commons.wikimedia.org/w/index.php?title=User:SPORTHEFT.DE_Marco_Cinquemani" target="_blank" rel="noopener noreferrer">SPORTHEFT.DE Marco Cinquemani</a> —
+                            <a href="https://commons.wikimedia.org/wiki/File:Calisthenics_Park_Stuttgart-Bad_Cannstatt.jpg" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> vía Wikimedia Commons.
+                        </span>
+                    </figcaption>
+                </figure>
+
+            </div>
+        </section>
+
+        <!-- ========================= VIDEO ========================= -->
+        <section id="video" class="section" aria-labelledby="video-title">
+            <h2 id="video-title">Video relacionado</h2>
+            <div class="video-frame-wrapper">
+                <video
+                    id="videoFrame"
+                    class="video-frame"
+                    controls
+                    preload="metadata"
+                    playsinline
+                    title="Video sobre calistenia: Deja el gimnasio, haz calistenia">
+                    <source src="videoplayback.mp4" type="video/mp4">
+                    Tu navegador no admite la reproducción de video HTML5.
+                    Puedes verlo en YouTube con el enlace alternativo de abajo.
+                </video>
+                <!-- Pista de audio local sincronizada con el video (videoplayback--Audio.m4a) -->
+                <audio id="videoAudio" preload="metadata" hidden>
+                    <source src="videoplayback--Audio.m4a" type="audio/mp4">
+                    Tu navegador no admite la reproducción de audio HTML5.
+                </audio>
+                <noscript>
+                    <p>El video no puede mostrarse porque JavaScript está desactivado.
+                       Puedes verlo directamente en YouTube.</p>
+                </noscript>
+            </div>
+
+            <p class="video-credit">
+                <strong>Ver también en YouTube:</strong>
+                <a href="https://www.youtube.com/watch?v=xXmbWDbxqJA" target="_blank" rel="noopener noreferrer">Deja el gimnasio, haz calistenia (sobre todo si eres flaco)</a>
+                — Canal <a href="https://www.youtube.com/@RikuGrowing" target="_blank" rel="noopener noreferrer">Riku</a>.
+            </p>
+
+            <p class="video-links">
+                <strong>Enlaces alternativos:</strong>
+                <a href="https://www.youtube.com/watch?v=xXmbWDbxqJA" target="_blank" rel="noopener noreferrer">Ver el video en YouTube (Riku)</a>
+                ·
+                <a href="https://commons.wikimedia.org/wiki/Category:Calisthenics" target="_blank" rel="noopener noreferrer">Multimedia sobre calistenia en Wikimedia Commons</a>
+            </p>
+            <p class="video-fallback" id="videoFallback" role="status" hidden>
+                ⚠️ No se pudo cargar el video local. Puedes verlo en YouTube siguiendo el enlace alternativo.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- ========================= PIE DE PÁGINA ========================= -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <h3>Sobre este sitio</h3>
+                <p>
+                    Sitio educativo sobre calistenia creado con HTML5, CSS3 y JavaScript (sin frameworks).
+                    Las imágenes provienen de Wikimedia Commons bajo licencias Creative Commons.
+                </p>
+            </div>
+            <div class="footer-col">
+                <h3>Fuentes</h3>
+                <ul class="footer-links">
+                    <li><a href="https://es.wikipedia.org/wiki/Calistenia" target="_blank" rel="noopener noreferrer">Wikipedia (es): Calistenia</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Calisthenics" target="_blank" rel="noopener noreferrer">Wikipedia (en): Calisthenics</a></li>
+                    <li><a href="https://commons.wikimedia.org/wiki/Category:Calisthenics" target="_blank" rel="noopener noreferrer">Wikimedia Commons: Calisthenics</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=xXmbWDbxqJA" target="_blank" rel="noopener noreferrer">Video: Riku (YouTube)</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Imágenes</h3>
+                <ul class="footer-links">
+                    <li>Calisthenics in Osdorp — Klaas `Z4us` van B. V (CC BY-SA 4.0)</li>
+                    <li>Street-workout-exercises — Someone272 (CC BY-SA 4.0)</li>
+                    <li>Street workout Bielsko-Biała — Marsilar (CC BY-SA 4.0)</li>
+                    <li>Calisthenics Park Stuttgart — Marco Cinquemani (CC BY 4.0)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© <span id="year">2026</span> · Sitio educativo de Calistenia. Hecho con HTML, CSS y JavaScript.</p>
+            <a href="#inicio" class="back-to-top">↑ Volver al inicio</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
